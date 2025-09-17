@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini Banking App — Patterns Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Mini Banking App — Observer / Strategy / Command</h1>
+
+    <section class="panel" id="accounts-panel">
+      <h2>Accounts</h2>
+      <div id="accounts-list"></div>
+      <div class="form-row">
+        <input id="new-name" placeholder="Customer name" />
+        <select id="new-type">
+          <option value="savings">Savings</option>
+          <option value="fixed">Fixed Deposit</option>
+          <option value="current">Current</option>
+        </select>
+        <button id="create-account">Create Account</button>
+      </div>
+    </section>
+
+    <section class="panel" id="operations-panel">
+      <h2>Operations</h2>
+      <div class="form-row">
+        <select id="op-account"></select>
+        <input id="amount" placeholder="Amount" type="number" />
+        <button id="deposit">Deposit</button>
+        <button id="withdraw">Withdraw</button>
+      </div>
+      <div class="form-row">
+        <select id="from-account"></select>
+        <select id="to-account"></select>
+        <input id="transfer-amount" placeholder="Amount" type="number" />
+        <button id="transfer">Transfer</button>
+      </div>
+      <div class="form-row">
+        <button id="apply-interest">Apply Interest (All)</button>
+        <button id="undo">Undo Last</button>
+      </div>
+    </section>
+
+    <section class="panel" id="notifications-panel">
+      <h2>Notifications</h2>
+      <div id="notifications"></div>
+    </section>
+
+    <section class="panel" id="log-panel">
+      <h2>Command Log</h2>
+      <div id="log"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

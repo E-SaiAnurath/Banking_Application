@@ -1,0 +1,120 @@
+:root {
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --muted: #555;
+  --accent: #2563eb;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: #222;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 28px auto;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 22px;
+  color: var(--accent);
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid #e5e7eb;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.form-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+input, select, button {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: white;
+  color: #222;
+}
+
+button {
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+#accounts-list .account {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-radius: 6px;
+  background: #f3f4f6;
+  margin: 6px 0;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #e5e7eb;
+}
+
+#notifications {
+  max-height: 160px;
+  overflow: auto;
+  padding: 6px;
+}
+
+.notification {
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+}
+
+#log {
+  max-height: 120px;
+  overflow: auto;
+  padding: 6px;
+}
+
+.log-item {
+  font-family: monospace;
+  font-size: 13px;
+  padding: 6px;
+  border-radius: 6px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 6px;
+}
+
+small.muted {
+  color: var(--muted);
+}
+
+@media (max-width: 720px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
